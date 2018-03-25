@@ -1,0 +1,28 @@
+config:
+  target: "http://localhost:3002"
+  # http:
+  #   pool: 1000
+  phases:
+    # - duration: 10
+    #   arrivalRate: 10
+    #   rampTo: 1600
+    #   name: "Warm up the application"
+    # - duration: 60
+    #   arrivalRate: 2400
+    #   name: "Sustained high load" 
+    - duration: 60
+      arrivalRate: 250
+      name: "Spike"
+  processor: "./generateUrls.js"
+scenarios:
+  - flow:
+    # - function: "generateUrls"
+    - loop: 
+      - function: "generateUrls"
+      # - get:
+      #     url: "/restaurants/{{ restaurantId }}/"
+      # - get:
+      #     url: "/restaurants/{{ restaurantId }}/bundle.js"
+      - get:
+          url: "/api/restaurants/{{ restaurantId }}/overview"
+      count: 5
