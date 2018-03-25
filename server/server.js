@@ -8,7 +8,8 @@ const app = express();
 
 app.use(morgan('dev'));
 app.get('/', (req, res) => {
-  res.redirect('/restaurants/ChIJUcXYWWGAhYARmjMY2bJAG2s/');
+  // res.redirect('/restaurants/ChIJUcXYWWGAhYARmjMY2bJAG2s/');
+  res.redirect('/restaurants/1/');
 })
 
 app.use('/restaurants/:id', express.static('public'));
