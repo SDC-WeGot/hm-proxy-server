@@ -1,12 +1,13 @@
+require('newrelic');
 const express = require('express');
 const path = require('path');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const restaurantsInfoRouter = require('./routes/routes.js');
 const bundleRouter = require('./routes/bundleRouter.js');
 
 const app = express();
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.get('/', (req, res) => {
   // res.redirect('/restaurants/ChIJUcXYWWGAhYARmjMY2bJAG2s/');
   res.redirect('/restaurants/1/');
