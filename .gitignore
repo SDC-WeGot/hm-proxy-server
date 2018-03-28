@@ -59,3 +59,10 @@ typings/
 
 #new relic
 newrelic.js
+
+#MAC Files
+.DS_Store
+
+#Bundles
+server/public/services/
+server/templates/services/

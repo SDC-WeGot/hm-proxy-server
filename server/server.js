@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const React = require('react');
 const ReactDom = require('react-dom/server');
+// const styled = require('styled-components');
 // const morgan = require('morgan');
 const restaurantsInfoRouter = require('./routes/routes.js');
 const bundleRouter = require('./routes/bundleRouter.js');
@@ -25,6 +26,14 @@ const renderComponents = (components, props = {}) => {
   return Object.keys(components).map(item => {
     let component = React.createElement(components[item], props);
     return ReactDom.renderToString(component);
+    // console.log('rendering components');
+    // res.write('<!DOCTYPE html><html><head><title>SSR Styled Components</title></head><body><div id="Overview">')
+    // const sheet = new styled.ServerStyleSheet()
+    // const jsx = sheet.collectStyles(React.createElement(components[item], props));
+    // console.log(jsx);
+    // const stream = sheet.interleaveWithNodeStream(ReactDom.renderToNodeStream(jsx));
+    // stream.pipe(res, { end: false });
+    // stream.on('end', () => res.end('</div></body></html>'));
   })
 }
 
@@ -44,7 +53,7 @@ app.get('/restaurants/:id', function(req, res) {
   res.end(Layout(
     'WeGot SSR',
     App(...components),
-    Scripts(Object.keys(services))
+    Scripts(Object.keys(services), req.params.id)
   ));
 });
 
