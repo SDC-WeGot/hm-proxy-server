@@ -8,15 +8,21 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon ./server/server.js",
+    "start": "NODE_ENV=production nodemon ./server/server.js",
     "docker-start": "node server/server.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "newrelic": "^3.2.0",
     "nodemon": "^1.17.1",
-    "request": "^2.83.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-transmit": "^3.2.0",
+    "request": "^2.83.0",
+    "styled-components": "^3.2.3"
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
