@@ -1,3 +1,3 @@
-module.exports = (overview) => `
-  <div id="Overview">${overview.string}</div>
+module.exports = (components) => `
+  <div id="Overview">${components.Overview.string}</div>
 `;
