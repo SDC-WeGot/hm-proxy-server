@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node ./server/server.js",
+    "start": "NODE_ENV=production node server/server.js",
     "docker-start": "node server/server.js"
   },
   "dependencies": {

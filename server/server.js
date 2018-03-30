@@ -14,7 +14,7 @@ const serviceConfig = require('./service-config.json');
 const services = require('./loader.js')(clientBundles, serverBundles, serviceConfig);
 
 const app = express();
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 4001;
 
 app.use('/lib', express.static('public/lib'));
 app.use('/services', express.static(path.join(__dirname, './public/services')));
