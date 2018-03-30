@@ -64,5 +64,5 @@ newrelic.js
 .DS_Store
 
 #Bundles
-server/public/services/
-server/templates/services/
+server/public/services/*.js
+server/templates/services/*.js
