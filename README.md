@@ -1,13 +1,13 @@
-# Project Name
+# We Got Proxy Server
 
-> Project description
+> Proxy server which integrates several microservices in order to present a full application.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/SDC-WeGot/overview
+  - https://github.com/SDC-WeGot/gallery
+  - https://github.com/SDC-WeGot/sidebar
+  - https://github.com/SDC-WeGot/recommendations
 
 ## Table of Contents
 
@@ -17,14 +17,13 @@
 
 ## Usage
 
-> Some usage instructions
+> When using the proxy server please make sure that all the underlying microservices are also started and able to be connected to. Also set the appropriate environment variables with the correct url's to each microservice.
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+Run npm install in order to install all project requirements.
 
 - Node 6.13.0
-- etc
 
 ## Development
 
@@ -33,7 +32,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
 
